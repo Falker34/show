@@ -1,0 +1,71 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int A1, B1, C1, A2, B2, C2, x, y, z, x1, y1, z1;
+    cin >> A1 >> B1 >> C1 >> A2 >> B2 >> C2;
+    if (A1 >= B1 && A1 >= C1) {
+        x = A1;
+        if (B1 >= C1) {
+            y = B1;
+            z = C1;}
+        else {
+            y = C1;
+            z = B1;}}
+    else if (B1 > A1 && B1 > C1) {
+        x = B1;
+            if (A1 >= C1) {
+                y = A1;
+                z = C1;}
+            else {
+                y = C1;
+                z = A1;}}
+    else {
+        x = C1;
+            if (B1 > A1) {
+                y = B1;
+                z = A1;}
+            else {
+                y = A1;
+                z = B1;}}
+     if (A2 >= B2 && A2 >= C2) {
+        x1 = A2;
+        if (B2 >= C2) {
+            y1 = B2;
+            z1 = C2;}
+        else {
+            y1 = C2;
+            z1 = B2;}}
+    else if (B2 > A2 && B2 > C2) {
+        x1 = B2;
+            if (A2 >= C2) {
+                y1 = A2;
+                z1 = C2;}
+            else {
+                y1 = C2;
+                z1 = A2;}}
+    else {
+        x1 = C2;
+            if (B2 > A2) {
+                y1 = B2;
+                z1 = A2;}
+            else {
+                y1 = A2;
+                z1 = B2;}}
+    
+    
+    
+  /*  cout << "length = " << x << "\n" << "wide = " << y << "\n" << "high = " << z << "\n";
+    cout << "length2 = " << x1 << "\n" << "wide2 = " << y1 << "\n" << "high2 = " << z1;*/
+    
+    
+    
+    if (x - x1 == 0 && y - y1 == 0 && z - z1 == 0)
+        cout << "Boxes are equal";
+    else if (x >= x1 && y >= y1 && z >= z1)
+        cout << "The first box is larger than the second one";
+    else if (x1 >= x && y1 >= y && z1 >= z)
+        cout << "The first box is smaller than the second one";
+    else
+        cout << "Boxes are incomparable";
+    return 0;
+}
